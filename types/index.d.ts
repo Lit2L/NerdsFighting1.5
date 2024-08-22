@@ -11,7 +11,6 @@ export type SiteConfig = {
   mailSupport: string
   links: {
     yelp: string
-    github: string
   }
 }
 

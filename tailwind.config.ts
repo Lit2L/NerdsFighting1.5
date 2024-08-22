@@ -11,24 +11,19 @@ const config: Config = {
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}'
   ],
+  future: {
+    hoverOnlyWhenSupported: true
+  },
   prefix: '',
   theme: {
     container: {
       center: true,
-      padding: '2rem',
+      padding: '.8rem',
       screens: {
         '2xl': '1400px'
       }
     },
     extend: {
-      boxShadow: {
-        input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`
-      },
-      textShadow: {
-        sm: '0 1px 2px var(--tw-shadow-color)',
-        DEFAULT: '0 2px 4px var(--tw-shadow-color)',
-        lg: '0 8px 16px var(--tw-shadow-color)'
-      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -38,6 +33,10 @@ const config: Config = {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))'
+        },
+        transitionTimingFunction: {
+          slow: 'cubic-bezier(.405, 0, .025, 1)',
+          'minor-spring': 'cubic-bezier(0.18,0.89,0.82,1.04)'
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
@@ -69,6 +68,14 @@ const config: Config = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
       },
+      boxShadow: {
+        input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`
+      },
+      textShadow: {
+        sm: '0 1px 2px var(--tw-shadow-color)',
+        DEFAULT: '0 2px 4px var(--tw-shadow-color)',
+        lg: '0 8px 16px var(--tw-shadow-color)'
+      },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
@@ -96,7 +103,14 @@ const config: Config = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        shimmer: 'shimmer 8s linear infinite'
+        shimmer: 'shimmer 8s linear infinite',
+        // Fade up and down
+        'fade-up': 'fade-up 0.5s',
+        'fade-down': 'fade-down 0.5s',
+
+        // Fade in and out
+        'fade-in': 'fade-in 0.4s',
+        'fade-out': 'fade-out 0.4s'
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
@@ -108,6 +122,7 @@ const config: Config = {
   },
   plugins: [
     require('tailwindcss-animate'),
+    require('@tailwindcss/typography'),
     plugin(addVariablesForColors),
     plugin(({ matchUtilities, theme }) => {
       matchUtilities(
@@ -147,7 +162,7 @@ const config: Config = {
       )
     })
   ]
-}
+} satisfies Config
 function addVariablesForColors({
   addBase,
   theme

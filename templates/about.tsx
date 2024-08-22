@@ -18,7 +18,7 @@ export const About = () => {
           <Image
             src='/dojo.png'
             alt='temple'
-            width={500}
+            width={400}
             height={300}
             className=' '
           />

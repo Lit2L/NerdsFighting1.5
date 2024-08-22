@@ -1,8 +1,12 @@
 import '../styles/globals.css'
 import localFont from 'next/font/local'
+import { SessionProvider } from 'next-auth/react'
+import { Toaster } from 'sonner'
 
 import { cn, constructMetadata } from '@/lib/utils'
 import { TooltipProvider } from '@/components/ui/tooltip'
+import { Analytics } from '@/components/analytics'
+import ModalProvider from '@/components/modals/providers'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { ThemeProvider } from '@/components/theme-provider'
 import { fontGeist, fontSans, fontUrban } from '@/app/assets'
@@ -29,7 +33,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head />
       <body
         className={cn(
-          'min-h-screen bg-background font-sans antialiased',
+          'min-h-screen max-w-full bg-background font-sans antialiased',
           fontSans.variable,
           fontUrban.variable,
           logoFont.variable,
@@ -37,17 +41,21 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontGeist.variable
         )}
       >
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='dark'
-          enableSystem
-          disableTransitionOnChange
-        >
-          <TooltipProvider>
-            {children}
-            <TailwindIndicator />
-          </TooltipProvider>
-        </ThemeProvider>
+        <SessionProvider>
+          <ThemeProvider
+            attribute='class'
+            defaultTheme='dark'
+            enableSystem
+            disableTransitionOnChange
+          >
+            <TooltipProvider>
+              <ModalProvider>{children}</ModalProvider>
+              <Analytics />
+              <Toaster richColors closeButton />
+              <TailwindIndicator />
+            </TooltipProvider>
+          </ThemeProvider>
+        </SessionProvider>
       </body>
     </html>
   )

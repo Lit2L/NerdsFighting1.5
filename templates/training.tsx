@@ -24,7 +24,7 @@ const featureCards = [
   },
   {
     id: 1,
-    title: 'Cardio Kickboxing Sessions',
+    title: 'Group Training Sessions',
     description:
       'Become part of a welcoming martial arts community where daily group sessions focus on conditioning, drills, mitts, Thai pads, heavy bag work, and more. All is aimed at helping you achieve peak performance. Dive into a high-energy, dynamic hour of kickboxing—perfect for beginners to boost your fitness leaving you feeling empowered and confident.',
     duration: '1 Hour',
@@ -63,9 +63,8 @@ const featureCards = [
   {
     id: 4,
     title: 'Private Coaching',
-    description:
-      'Take your kickboxing skills to another level through private lessons where you can personalize your training and focus on yourself. With private lessons you can hyper focus on a specifics or have a general training session to help you improve in all areas. Ideal for beginners and experienced kickboxers alike, private lessons help you master technique at your own pace.',
-    duration: '1 Hour - ALL AGES. ALL LEVELS.',
+    description: `Advance your skills level up your technique with private lessons customized to your goals. Whether you want to fine-tune  specific techniques or enhance your overall performance, private sessions provide the perfect opportunity.  Suitable for beginners and seasoned kickboxers alike, private lessons allow you to level up your craft at your own pace`,
+    duration: '1 Hour',
     recommended:
       'boxing/kickboxing/muay thai gloves, hand wraps, water bottle, shin-pads, towel',
     image: '/about1.jpg',
@@ -76,7 +75,7 @@ const featureCards = [
     id: 5,
     title: 'Outdoor Training',
     description:
-      'Train like ancient warriors with our outdoor sessions. Connect with nature, enhance your fitness, and build mental toughness in a challenging and invigorating environment.',
+      'Embrace the outdoors with our training sessions that let you soak up the sun and breathe in the fresh air. Connect with nature as you boost your fitness and build mental toughness with outdoor training sessions that include bodyweight exercises, drills, mitts, Thai pads, heavy bag work, and more.',
     duration: '1 Hour ALL LEVELS.',
     levels: '',
     recommended: '',
@@ -120,20 +119,22 @@ export const Training = () => {
               </div>
             </div>
 
-            <div className='flex flex-col border-t border-b'>
-              <div className='p-6'>
-                <div className='flex gap-6 p-2'>
+            <div className='flex flex-col border-b'>
+              <div className='px-16 mx-auto '>
+                <div className='flex gap-3 items-center'>
                   <div className='text-black'>{card.icon}</div>
                   <p className='font-heading text-lg'>{card.title}</p>
                 </div>
-                <p className='text-sm p-3'>
-                  <span className='font-bold'>Duration:</span> {card.duration}
-                </p>
-                <div className=''>
-                  <p className='text-sm dark:text-white'>
-                    <strong className='p-3'> Description:</strong>{' '}
-                    {card.description}
-                  </p>
+                <div className='flex flex-col py-3 space-y-3'>
+                  {/* <p className='text-sm '>
+                    <span className='font-bold'>Duration:</span> {card.duration}
+                  </p> */}
+                  <div className=''>
+                    <p className='text-sm dark:text-white'>
+                      <strong className=''> Description:</strong>{' '}
+                      {card.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

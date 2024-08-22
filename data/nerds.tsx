@@ -85,12 +85,6 @@ export const DATA = {
     email: 'larryly1@gmail.com',
     tel: '+7149075273',
     social: {
-      GitHub: {
-        name: 'GitHub',
-        url: 'https://github.com/Lit2L',
-        icon: IconContract,
-        navbar: true
-      },
       LinkedIn: {
         name: 'LinkedIn',
         url: 'https://www.linkedin.com/in/larry-ly/',
