@@ -5,7 +5,7 @@ const site_url = process.env.NEXT_PUBLIC_APP_URL
 export const siteConfig: SiteConfig = {
   name: 'Nerds Fighting',
   description: 'Kickboxing Gym, Training, Safety, Friendly, Deals.',
-  url: site_url || 'http://localhost:3000',
+  url: site_url || 'https://nerdsfighting.com',
   ogImage: `${site_url}/_static/og.jpg`,
   links: {
     yelp: 'https://yelp.com'

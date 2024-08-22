@@ -19,7 +19,7 @@ export const DATA = {
   url: 'https://larryly.com',
   location: 'Orange, CA',
   locationLink: 'https://www.google.com/maps/place/sanfrancisco',
-  description: 'Data & Applications Developer.',
+  description: 'Kickboxing and martial arts club.',
   summary: 'i fight nerds',
   navbar: [
     { href: '/#', icon: HomeIcon, label: 'Home' },

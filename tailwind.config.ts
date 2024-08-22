@@ -68,6 +68,12 @@ const config: Config = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
       },
+      fontFamily: {
+        sans: ['var(--font-sans)', ...fontFamily.sans],
+        heading: ['var(--font-heading)', ...fontFamily.sans],
+        logo: ['var(--font-logo)', ...fontFamily.sans],
+        blackOps: ['var(--font-blackOps)', ...fontFamily.sans]
+      },
       boxShadow: {
         input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`
       },
@@ -111,12 +117,6 @@ const config: Config = {
         // Fade in and out
         'fade-in': 'fade-in 0.4s',
         'fade-out': 'fade-out 0.4s'
-      },
-      fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans],
-        heading: ['var(--font-heading)', ...fontFamily.sans],
-        logo: ['var(--font-logo)', ...fontFamily.sans]
-        // kronaOne: ['var(--font-krona-one)', ...fontFamily.sans]
       }
     }
   },

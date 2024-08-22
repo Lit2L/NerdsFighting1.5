@@ -3,36 +3,51 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-import { ModeToggle } from '@/components/mode-toggle'
-import { linkVariants, navVariants } from '@/components/navigation'
+import { useScroll } from '@/hooks/use-scroll'
+import { linkVariants } from '@/components/navigation'
+import { ThemeToggleButton } from '@/components/theme-toggle-button'
 
 import Logo from '../logo'
 
 const AnimatedLink = motion(Link)
-AnimatedLink.defaultProps = {
-  className:
-    'hover:text-primary-brand nav-link text-white font-light font-black text-sm tracking-wide'
+AnimatedLink.defaultProps = { className: ' nav-link font-bold' }
+
+interface NavBarProps {
+  scroll?: boolean
+  large?: boolean
 }
 
-export function Navigation() {
+export function Navigation({ scroll = false }: NavBarProps) {
+  const scrolled = useScroll(50)
+
   return (
-    <header className='sticky top-0 z-40 w-full backdrop-blur-xl flex items-center justify-between px-16 transition-all bg-gradient-to-b dark:from-emerald-500/90 dark:via-emerald-400 dark:to-emerald-600/95 from-emerald-400/70 via-emerald-300/70 to-gray-500/10'>
-      <div className='size-20 flex flex-col justify-center items-center'>
-        <Link href='/#' className=''>
-          <Logo />
-        </Link>
-      </div>
-      <nav className='flex items-center font-heading'>
-        <div className='flex px-12 space-x-3 text-sm'>
-          <Link href='/#about'>About</Link>
-          <Link href='/#training'>Training</Link>
-          <Link href='/#schedule'>Schedule</Link>
-          <Link href='/#menu'>Menu</Link>
-        </div>
-        <div>
-          <ModeToggle />
-        </div>
+    <motion.header
+      className={`sticky top-0 z-40 flex w-full items-center bg-background/60 backdrop-blur-xl transition-all ${
+        scroll ? (scrolled ? 'border-b' : 'bg-transparent') : 'border-b'
+      }`}
+    >
+      <AnimatedLink href='/#' variants={linkVariants} className='h-20 w-28'>
+        <Logo />
+      </AnimatedLink>
+
+      <nav className='text-md flex items-center justify-center gap-x-6 font-kronaOne tracking-tight'>
+        <AnimatedLink href='/#intro' variants={linkVariants}>
+          Introduction
+        </AnimatedLink>
+        <AnimatedLink href='/#about' variants={linkVariants}>
+          About
+        </AnimatedLink>
+        <AnimatedLink href='/schedule' variants={linkVariants}>
+          Schedule
+        </AnimatedLink>
+        <AnimatedLink href='/#classes' variants={linkVariants}>
+          Classes
+        </AnimatedLink>
+
+        <motion.div variants={linkVariants}>
+          <ThemeToggleButton />
+        </motion.div>
       </nav>
-    </header>
+    </motion.header>
   )
 }

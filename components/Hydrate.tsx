@@ -1,8 +1,9 @@
 'use client'
 
-import { cn } from '@/lib/utils'
-import { SessionProvider } from 'next-auth/react'
+// import { SessionProvider } from 'next-auth/react'
 import { ReactNode, useEffect, useState } from 'react'
+
+import { cn } from '@/lib/utils'
 
 export default function Hydrate({ children }: { children: ReactNode }) {
   const [isHydrated, setIsHydrated] = useState(false)
@@ -20,10 +21,10 @@ export default function Hydrate({ children }: { children: ReactNode }) {
   }, [])
 
   return (
-    <SessionProvider>
-      <body className={cn('min-h-screen bg-background/90 text-[#f2f2f2]')}>
-        {isHydrated && children}
-      </body>
-    </SessionProvider>
+    // <SessionProvider>
+    <body className={cn('min-h-screen bg-background/90 text-[#f2f2f2]')}>
+      {isHydrated && children}
+    </body>
+    // </SessionProvider>
   )
 }

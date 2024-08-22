@@ -6,24 +6,9 @@ export const fontSans = FontSans({
   variable: '--font-sans'
 })
 
-export const fontUrban = Urbanist({
-  subsets: ['latin'],
-  variable: '--font-urban'
-})
-
-export const fontHeading = localFont({
-  src: './CalSans-SemiBold.woff2',
-  variable: '--font-heading'
-})
-
-export const fontGeist = localFont({
-  src: './GeistVF.woff2',
-  variable: '--font-geist'
-})
-
-export const fontNorthStar = localFont({
+export const fontLogo = localFont({
   src: './Northstar3D-4D3x.otf',
-  variable: '--font-northstar'
+  variable: '--font-logo'
 })
 
 export const fontBlackOps = localFont({
