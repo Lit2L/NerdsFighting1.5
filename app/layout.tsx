@@ -1,12 +1,8 @@
 import '../styles/globals.css'
-import { Metadata } from 'next'
 import localFont from 'next/font/local'
 
-import { siteConfig } from '@/config/site'
 import { cn, constructMetadata } from '@/lib/utils'
 import { TooltipProvider } from '@/components/ui/tooltip'
-import Hydrate from '@/components/Hydrate'
-import { Navigation } from '@/components/navigation'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { ThemeProvider } from '@/components/theme-provider'
 import { fontGeist, fontSans, fontUrban } from '@/app/assets'
@@ -30,6 +26,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='en' suppressHydrationWarning>
+      <head />
       <body
         className={cn(
           'min-h-screen bg-background font-sans antialiased',
@@ -40,12 +37,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontGeist.variable
         )}
       >
-        <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='dark'
+          enableSystem
+          disableTransitionOnChange
+        >
           <TooltipProvider>
-            <div className='relative flex w-full min-h-screen flex-col'>
-              <div className='mt-24'>{children}</div>
-              <TailwindIndicator />
-            </div>
+            {children}
+            <TailwindIndicator />
           </TooltipProvider>
         </ThemeProvider>
       </body>

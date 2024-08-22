@@ -3,11 +3,10 @@ import { Calendar } from 'lucide-react'
 import { GiPunchingBag } from 'react-icons/gi'
 import { MdSportsMartialArts } from 'react-icons/md'
 
-import { Card, CardContent, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import { AnimatedJoinButton } from '@/components/magicui/AnimatedJoinButton'
 
-export const Schedule = () => {
+export const Schedule: React.FC = () => {
   const classes = [
     {
       id: 1,
@@ -63,15 +62,12 @@ export const Schedule = () => {
   ]
 
   return (
-    <section
-      id='classes'
-      className='w-full h-[80dvh] dark:bg-[radial-gradient(circle_400px_at_50%_350px,#144437,transparent)] mt-24 border'
-    >
-      <div className='mx-auto flex flex-col items-center justify-center sm:container'>
+    <section id='schedule' className='w-full'>
+      <div className='mx-auto flex flex-col items-center justify-center '>
         <div className='space-y-9 text-center'>
           <Link
             href='/schedule'
-            className='font-logo text-3xl tracking-wide text-black/80 dark:text-white  md:text-6xl'
+            className='font-heading text-4xl tracking-wide text-black/80 dark:text-white'
           >
             Class Schedule
           </Link>
@@ -82,18 +78,18 @@ export const Schedule = () => {
         <div className='mt-9 flex flex-wrap justify-center gap-6'>
           {classes &&
             classes.map((item) => (
-              <Card
+              <div
                 key={item.id}
                 className='flex h-52 w-64 flex-col rounded-xl border-zinc-700 bg-zinc-900/95 p-3 shadow-xl shadow-gray-800 transition-all duration-300 hover:scale-95 dark:bg-zinc-800 dark:shadow-gray-800/40'
               >
-                <CardTitle className='p-1'>
+                <div className='p-1'>
                   <div className='flex items-center justify-between gap-3'>
                     <MdSportsMartialArts className='size-6 text-white' />
-                    <h3 className='font-sans text-white dark:text-gray-300'>
+                    <p className='font-sans text-white dark:text-gray-300'>
                       {item.title}
-                    </h3>
+                    </p>
                   </div>
-                </CardTitle>
+                </div>
                 <Separator className='my-1' />
 
                 <div className='flex flex-col items-center  '>
@@ -127,7 +123,7 @@ export const Schedule = () => {
                   </span>
                   <AnimatedJoinButton />
                 </div>
-              </Card>
+              </div>
             ))}
         </div>
       </div>

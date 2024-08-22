@@ -1,12 +1,12 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 
 function Logo() {
   return (
     <Image
       src='/logo.png'
       alt='Nerds Kickboxing Club'
-      width={400}
-      height={400}
+      width={320}
+      height={200}
       priority
       className='rounded-full'
     />

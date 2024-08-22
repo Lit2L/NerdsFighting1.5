@@ -33,7 +33,10 @@ export default function GradualSpacing({
             exit='hidden'
             variants={framerProps}
             transition={{ duration, delay: i * delayMultiple }}
-            className={cn('drop-shadow-sm ', className)}
+            className={cn(
+              'shadow-lg text-4xl md:text-6xl -tracking-[8px] font-bold',
+              className
+            )}
           >
             {char === ' ' ? <span>&nbsp;</span> : char}
           </motion.h1>

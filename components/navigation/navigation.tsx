@@ -16,34 +16,23 @@ AnimatedLink.defaultProps = {
 
 export function Navigation() {
   return (
-    <motion.header
-      variants={navVariants}
-      initial='hidden'
-      animate='visible'
-      className='fixed top-0 left-0 z-50 w-full h-24 bg-background/90 backdrop-blur-lg flex items-center justify-between px-6'
-    >
-      <AnimatedLink href='/#' variants={linkVariants} className='h-20 w-28'>
-        <Logo />
-      </AnimatedLink>
-
-      <nav className='flex items-center justify-center gap-x-6 text-xs font-heading'>
-        <AnimatedLink href='/#intro' variants={linkVariants}>
-          Introduction
-        </AnimatedLink>
-        <AnimatedLink href='/#about' variants={linkVariants}>
-          About
-        </AnimatedLink>
-        <AnimatedLink href='/schedule' variants={linkVariants}>
-          Schedule
-        </AnimatedLink>
-        <AnimatedLink href='/#classes' variants={linkVariants}>
-          Classes
-        </AnimatedLink>
-
-        <motion.div variants={linkVariants}>
+    <header className='sticky top-0 z-40 w-full backdrop-blur-xl flex items-center justify-between px-16 transition-all bg-gradient-to-b dark:from-emerald-500/90 dark:via-emerald-400 dark:to-emerald-600/95 from-emerald-400/70 via-emerald-300/70 to-gray-500/10'>
+      <div className='size-20 flex flex-col justify-center items-center'>
+        <Link href='/#' className=''>
+          <Logo />
+        </Link>
+      </div>
+      <nav className='flex items-center font-heading'>
+        <div className='flex px-12 space-x-3 text-sm'>
+          <Link href='/#about'>About</Link>
+          <Link href='/#training'>Training</Link>
+          <Link href='/#schedule'>Schedule</Link>
+          <Link href='/#menu'>Menu</Link>
+        </div>
+        <div>
           <ModeToggle />
-        </motion.div>
+        </div>
       </nav>
-    </motion.header>
+    </header>
   )
 }

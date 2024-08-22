@@ -49,13 +49,7 @@ export function constructMetadata({
       description,
       siteName: title
     },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-      images: [image],
-      creator: '@miickasmt'
-    },
+
     icons,
     metadataBase: new URL(siteConfig.url),
     manifest: `${siteConfig.url}/site.webmanifest`,
@@ -78,15 +72,7 @@ export function formatDate(input: string | number): string {
 }
 
 export function absoluteUrl(path: string) {
-  return `${env.NEXT_PUBLIC_APP_URL}${path}`
-}
-
-// Utils from precedent.dev
-export const timeAgo = (timestamp: Date, timeOnly?: boolean): string => {
-  if (!timestamp) return 'never'
-  return `${ms(Date.now() - new Date(timestamp).getTime())}${
-    timeOnly ? '' : ' ago'
-  }`
+  return `${'http://localhost:3000'}${path}`
 }
 
 export async function fetcher<JSON = any>(

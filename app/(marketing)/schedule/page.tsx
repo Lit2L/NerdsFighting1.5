@@ -4,7 +4,6 @@ import { Calendar } from 'lucide-react'
 import { GiPunchingBag } from 'react-icons/gi'
 import { MdSportsMartialArts } from 'react-icons/md'
 
-import { Card, CardContent, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import { AnimatedJoinButton } from '@/components/magicui/AnimatedJoinButton'
 
@@ -83,18 +82,18 @@ const Schedule: React.FC = () => {
         <div className='mt-9 flex flex-wrap justify-center gap-6'>
           {classes &&
             classes.map((item) => (
-              <Card
+              <div
                 key={item.id}
                 className='flex h-52 w-64 flex-col rounded-xl border-zinc-700 bg-zinc-900/95 p-3 shadow-xl shadow-gray-800 transition-all duration-300 hover:scale-95 dark:bg-zinc-800 dark:shadow-gray-800/40'
               >
-                <CardTitle className='p-1'>
+                <div className='p-1'>
                   <div className='flex items-center justify-between gap-3'>
                     <MdSportsMartialArts className='size-6 text-white' />
-                    <h3 className='font-sans text-white dark:text-gray-300'>
+                    <p className='font-sans text-white dark:text-gray-300'>
                       {item.title}
-                    </h3>
+                    </p>
                   </div>
-                </CardTitle>
+                </div>
                 <Separator className='my-1' />
 
                 <div className='flex flex-col items-center  '>
@@ -128,16 +127,16 @@ const Schedule: React.FC = () => {
                   </span>
                   <AnimatedJoinButton />
                 </div>
-              </Card>
+              </div>
             ))}
         </div>
-        <Card className='m-12'>
-          <CardContent className='p-6'>
-            <h3 className='font-heading text-2xl'>Location: Williams MMA</h3>
+        <div className='m-12'>
+          <div className='p-6'>
+            <p className='font-heading text-2xl'>Location: Williams MMA</p>
             <Separator className='my-3' />
             Address: 8780 Warner Ave, Suite 7 Fountain Valley, CA 92708
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       </div>
     </section>
   )

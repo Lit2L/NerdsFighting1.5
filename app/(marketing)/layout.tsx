@@ -10,12 +10,12 @@ interface MarketingLayoutProps {
 
 export default function MarketingLayout({ children }: MarketingLayoutProps) {
   return (
-    <div className='flex min-h-screen flex-col'>
+    <div className='min-h-screen bg-[radial-gradient(circle_700px_at_50%_350px,#181818,transparent)] '>
       {/* <NavMobile />
       <NavBar scroll={true} /> */}
-      <header className='fixed inset-x-0 top-0 z-40 h-20 bg-gradient-to-bl from-emerald-500/90 via-emerald-400 to-emerald-600/95'>
-        <Navigation />
-      </header>
+
+      <Navigation />
+
       <main className='flex-1'>{children}</main>
       <SiteFooter />
     </div>
