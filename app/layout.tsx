@@ -1,32 +1,18 @@
-import '@/styles/globals.css'
+import '../styles/globals.css'
 import { Metadata } from 'next'
 import localFont from 'next/font/local'
 
 import { siteConfig } from '@/config/site'
-import { cn } from '@/lib/utils'
+import { cn, constructMetadata } from '@/lib/utils'
 import { TooltipProvider } from '@/components/ui/tooltip'
-import Navbar from '@/components/navbar'
+import Hydrate from '@/components/Hydrate'
 import { Navigation } from '@/components/navigation'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { ThemeProvider } from '@/components/theme-provider'
-import { fontGeist, fontSans, fontUrban } from '@/app/assets/fonts'
+import { fontGeist, fontSans, fontUrban } from '@/app/assets'
 
-export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`
-  },
-  description: siteConfig.description,
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' }
-  ],
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png'
-  }
-}
+export const metadata = constructMetadata()
+
 export const fontHeading = localFont({
   src: '/assets/BlackOpsOne-Regular.ttf',
   variable: '--font-heading'
@@ -43,29 +29,26 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <>
-      <html lang='en' suppressHydrationWarning>
-        <head />
-        <body
-          className={cn(
-            'min-h-screen bg-background max-w-full mx-auto font-sans antialiased relative',
-            fontSans.variable,
-            fontUrban.variable,
-            logoFont.variable,
-            fontHeading.variable,
-            fontGeist.variable
-          )}
-        >
-          <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
-            <TooltipProvider>
-              <Navigation />
-              <Navbar />
+    <html lang='en' suppressHydrationWarning>
+      <body
+        className={cn(
+          'min-h-screen bg-background font-sans antialiased',
+          fontSans.variable,
+          fontUrban.variable,
+          logoFont.variable,
+          fontHeading.variable,
+          fontGeist.variable
+        )}
+      >
+        <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
+          <TooltipProvider>
+            <div className='relative flex w-full min-h-screen flex-col'>
               <div className='mt-24'>{children}</div>
               <TailwindIndicator />
-            </TooltipProvider>
-          </ThemeProvider>
-        </body>
-      </html>
-    </>
+            </div>
+          </TooltipProvider>
+        </ThemeProvider>
+      </body>
+    </html>
   )
 }

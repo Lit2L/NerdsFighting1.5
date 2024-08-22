@@ -1,18 +1,43 @@
-export type SiteConfig = typeof siteConfig
+import { SidebarNavItem, SiteConfig } from 'types'
 
-export const siteConfig = {
-  name: "Next.js",
-  description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
-  mainNav: [
-    {
-      title: "Home",
-      href: "/",
-    },
-  ],
+export const siteConfig: SiteConfig = {
+  name: 'Nerds Fighting',
+  description: 'Kickboxing Gym, Training, Safety, Friendly, Deals.',
+  url: 'https://nerdsfighting.com',
+  ogImage: '/og-image.jpg',
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
-    docs: "https://ui.shadcn.com",
+    yelp: 'https://yelp.com',
+    github: 'https://github.com/Lit2l'
   },
+  mailSupport: 'support@saas-starter.com'
 }
+
+export const footerLinks: SidebarNavItem[] = [
+  {
+    title: 'Company',
+    items: [
+      { title: 'About', href: '#' },
+      { title: 'Enterprise', href: '#' },
+      { title: 'Terms', href: '/terms' },
+      { title: 'Privacy', href: '/privacy' }
+    ]
+  },
+  {
+    title: 'Product',
+    items: [
+      { title: 'Security', href: '#' },
+      { title: 'Customization', href: '#' },
+      { title: 'Customers', href: '#' },
+      { title: 'Changelog', href: '#' }
+    ]
+  },
+  {
+    title: 'Docs',
+    items: [
+      { title: 'Introduction', href: '#' },
+      { title: 'Installation', href: '#' },
+      { title: 'Components', href: '#' },
+      { title: 'Code Blocks', href: '#' }
+    ]
+  }
+]

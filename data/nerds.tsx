@@ -24,14 +24,9 @@ export const DATA = {
   navbar: [
     { href: '/#', icon: HomeIcon, label: 'Home' },
     { href: '/#about', icon: IconUserCircle, label: 'About' },
-    { href: '/#work', icon: IconListCheck, label: 'Work History' },
-    { href: '/#hackathons', icon: IconTrophy, label: 'hackathons' },
-    {
-      href: '/#certifications',
-      icon: IconCertificate,
-      label: 'Certifications'
-    },
-    { href: '/#applications', icon: IconApps, label: 'Applications' }
+    { href: '/#schedule', icon: IconListCheck, label: 'Schedule' },
+    { href: '/#training', icon: IconTrophy, label: 'Training' },
+    { href: '/#classes', icon: IconApps, label: 'Classes' }
   ],
   services: [
     {

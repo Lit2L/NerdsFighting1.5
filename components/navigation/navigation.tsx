@@ -3,8 +3,8 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
+import { ModeToggle } from '@/components/mode-toggle'
 import { linkVariants, navVariants } from '@/components/navigation'
-import { ThemeToggleButton } from '@/components/theme-toggle-button'
 
 import Logo from '../logo'
 
@@ -20,7 +20,7 @@ export function Navigation() {
       variants={navVariants}
       initial='hidden'
       animate='visible'
-      className='container h-24 fixed inset-x-0 top-0 z-50 hidden w-full items-center justify-between md:flex bg-gradient-to-b from-slate-400/95 via-slate-800/70 to-slate-300/70  dark:bg-gradient-to-bl dark:from-emerald-400/95 dark:via-emerald-600/70 dark:to-emerald-400/95'
+      className='fixed top-0 left-0 z-50 w-full h-24 bg-background/90 backdrop-blur-lg flex items-center justify-between px-6'
     >
       <AnimatedLink href='/#' variants={linkVariants} className='h-20 w-28'>
         <Logo />
@@ -41,7 +41,7 @@ export function Navigation() {
         </AnimatedLink>
 
         <motion.div variants={linkVariants}>
-          <ThemeToggleButton />
+          <ModeToggle />
         </motion.div>
       </nav>
     </motion.header>

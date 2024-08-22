@@ -10,15 +10,16 @@ export function AccordionAbout() {
     <Accordion
       type='single'
       collapsible
-      className='w-full font-heading max-w-2xl '
+      className='w-full font-light font-urban max-w-2xl '
     >
-      <AccordionItem value='item-1'>
+      <AccordionItem value='item-1 '>
         <AccordionTrigger>
-          <span className=' text-center text-xl text-white'>
+          <span className='font-heading text-center text-xl text-white'>
             Nerds Fighting Origins...
           </span>{' '}
         </AccordionTrigger>
-        <AccordionContent>
+
+        <AccordionContent className='leading-6 font-urban'>
           Once upon a time a group of friends, united by their shared love for
           comics, anime, books, video games, magic cards and kung-fu movies,
           decided to transform their lives. They were the ones who always
@@ -36,7 +37,7 @@ export function AccordionAbout() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value='item-2'>
-        <AccordionTrigger>Continue..</AccordionTrigger>
+        <AccordionTrigger>Nerds Fighting was Born..</AccordionTrigger>
         <AccordionContent>
           <span className='font-logo text-2xl text-emerald-500'>
             Nerds Fighting
