@@ -22,7 +22,7 @@ export function Navigation({ scroll = false }: NavBarProps) {
 
   return (
     <motion.header
-      className={`sticky top-0 z-40 flex w-full items-center bg-background/60 backdrop-blur-xl transition-all ${
+      className={`sticky top-0 z-40 flex justify-between px-12 py-3 w-full items-center bg-background/60 backdrop-blur-xl transition-all ${
         scroll ? (scrolled ? 'border-b' : 'bg-transparent') : 'border-b'
       }`}
     >

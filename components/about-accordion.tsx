@@ -16,7 +16,7 @@ export function AccordionAbout() {
     >
       <AccordionItem value='item-1 '>
         <AccordionTrigger>
-          <span className='font-heading text-center text-xl '>
+          <span className='font-heading text-center text-lg '>
             Nerds Fighting Origins...
           </span>{' '}
         </AccordionTrigger>
@@ -41,8 +41,8 @@ export function AccordionAbout() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value='item-2'>
-        <AccordionTrigger>
-          Nerds Fighting was Born(continued...)
+        <AccordionTrigger className='text-sm'>
+          Nerds Story Continued...
         </AccordionTrigger>
         <AccordionContent className='font-sans leading-6 bg-black/10 rounded-lg '>
           And so...

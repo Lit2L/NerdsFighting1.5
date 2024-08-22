@@ -11,7 +11,7 @@ export const fontLogo = localFont({
   variable: '--font-logo'
 })
 
-export const fontBlackOps = localFont({
+export const fontHeading = localFont({
   src: './BlackOpsOne-Regular.ttf',
-  variable: '--font-blackops'
+  variable: '--font-heading'
 })

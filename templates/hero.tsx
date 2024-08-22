@@ -26,7 +26,7 @@ export const Hero = () => {
             </div>
             <FlipWordsComponent />
           </div>
-          <div className='flex gap-6 justify-center h-24'>
+          <div className='flex gap-3 sm:gap-6 justify-center h-24'>
             <AnimatedJoinButton />
             <AnimatedMembersButton />
           </div>

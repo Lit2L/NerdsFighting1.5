@@ -101,7 +101,7 @@ export const Training = () => {
   return (
     <section id='training' className='w-full h-full '>
       <div className='text-center  '>
-        <p className='my-6 text-3xl font-heading '>Training</p>
+        <p className='my-6 text-4xl font-heading uppercase'>TRAINING</p>
       </div>
       <Separator className='my-3 text-black' />
       <div className='w-full mx-auto'>
@@ -120,21 +120,16 @@ export const Training = () => {
             </div>
 
             <div className='flex flex-col border-b'>
-              <div className='px-16 mx-auto '>
+              <div className=' p-6 flex flex-col gap-3'>
                 <div className='flex gap-3 items-center'>
-                  <div className='text-black'>{card.icon}</div>
-                  <p className='font-heading text-lg'>{card.title}</p>
+                  <div className=''>{card.icon}</div>
+                  <p className='font-heading text-md'>{card.title}</p>
                 </div>
-                <div className='flex flex-col py-3 space-y-3'>
-                  {/* <p className='text-sm '>
-                    <span className='font-bold'>Duration:</span> {card.duration}
-                  </p> */}
-                  <div className=''>
-                    <p className='text-sm dark:text-white'>
-                      <strong className=''> Description:</strong>{' '}
-                      {card.description}
-                    </p>
-                  </div>
+                <div className='flex flex-col '>
+                  <p className='text-sm dark:text-white'>
+                    <strong className=''> Description:</strong>{' '}
+                    {card.description}
+                  </p>
                 </div>
               </div>
             </div>

@@ -6,7 +6,7 @@ import { TooltipProvider } from '@/components/ui/tooltip'
 import { Analytics } from '@/components/analytics'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { ThemeProvider } from '@/components/theme-provider'
-import { fontBlackOps, fontLogo, fontSans } from '@/app/assets'
+import { fontHeading, fontLogo, fontSans } from '@/app/assets'
 
 export const metadata = constructMetadata()
 
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={cn(
           'min-h-screen max-w-full bg-background font-sans antialiased',
           fontSans.variable,
-          fontBlackOps.variable,
+          fontHeading.variable,
           fontLogo.variable
         )}
       >

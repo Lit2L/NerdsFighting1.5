@@ -71,8 +71,7 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
         heading: ['var(--font-heading)', ...fontFamily.sans],
-        logo: ['var(--font-logo)', ...fontFamily.sans],
-        blackOps: ['var(--font-blackOps)', ...fontFamily.sans]
+        logo: ['var(--font-logo)', ...fontFamily.sans]
       },
       boxShadow: {
         input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`

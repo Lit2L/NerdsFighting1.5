@@ -67,9 +67,9 @@ export const Schedule: React.FC = () => {
         <div className='space-y-9 text-center'>
           <Link
             href='/schedule'
-            className='font-heading text-4xl tracking-wide text-black/80 dark:text-white'
+            className='font-heading text-4xl font-bold tracking-wide text-black/80 dark:text-white'
           >
-            Class Schedule
+            CLASS SCHEDULE
           </Link>
           <p className='font-heading font-light text-black dark:text-white'>
             Find the schedule for you.
