@@ -71,6 +71,7 @@ export const Schedule: React.FC = () => {
           >
             CLASS SCHEDULE
           </Link>
+          <Separator className='w-20 mx-auto' />
           <p className='font-heading font-light text-black dark:text-white'>
             Find the schedule for you.
           </p>

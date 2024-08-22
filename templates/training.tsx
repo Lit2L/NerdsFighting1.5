@@ -103,7 +103,7 @@ export const Training = () => {
       <div className='text-center  '>
         <p className='my-6 text-4xl font-heading uppercase'>TRAINING</p>
       </div>
-      <Separator className='my-3 text-black' />
+      <Separator className='w-20' />
       <div className='w-full mx-auto'>
         {featureCards.map((card, index) => (
           <div key={card.id} className='flex flex-col mt-6 gap-6 '>
