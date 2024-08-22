@@ -108,7 +108,7 @@ export const Training = () => {
       <div className='w-full mx-auto'>
         {featureCards.map((card, index) => (
           <div key={card.id} className='flex flex-col mt-6 gap-6 '>
-            <div className='w-full flex-1 mx-auto'>
+            <div className='w-full'>
               <div className='flex w-full items-center p-2 justify-center'>
                 <Image
                   src={card.image}
@@ -120,7 +120,7 @@ export const Training = () => {
               </div>
             </div>
 
-            <div className=' flex-1 flex flex-col items-start border-t border-b'>
+            <div className='flex flex-col border-t border-b'>
               <div className='p-6'>
                 <div className='flex gap-6 p-2'>
                   <div className='text-black'>{card.icon}</div>

@@ -41,6 +41,9 @@ dependencies:
   mini-svg-data-uri:
     specifier: ^1.4.4
     version: 1.4.4
+  ms:
+    specifier: ^2.1.3
+    version: 2.1.3
   next:
     specifier: ^13.4.8
     version: 13.5.6(@babel/core@7.25.2)(react-dom@18.3.1)(react@18.3.1)
@@ -70,6 +73,9 @@ devDependencies:
   '@ianvs/prettier-plugin-sort-imports':
     specifier: ^3.7.2
     version: 3.7.2(prettier@2.8.8)
+  '@types/ms':
+    specifier: ^0.7.34
+    version: 0.7.34
   '@types/node':
     specifier: ^17.0.45
     version: 17.0.45
@@ -1054,6 +1060,10 @@ packages:
   /@types/locomotive-scroll@4.1.3:
     resolution: {integrity: sha512-mo8BIiFA2OOyB/Mmv0U0WL9AjBisUdUi0AMeA6hcMODEFLZvwk0UUPM+yKzMnwfpYxC/LKNiZKXO7LQp+08mMg==}
     dev: false
+
+  /@types/ms@0.7.34:
+    resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
+    dev: true
 
   /@types/node@17.0.45:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
@@ -2907,7 +2917,6 @@ packages:
 
   /ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
-    dev: true
 
   /mz@2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}

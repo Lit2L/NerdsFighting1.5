@@ -4,7 +4,7 @@ export const siteConfig: SiteConfig = {
   name: 'Nerds Fighting',
   description: 'Kickboxing Gym, Training, Safety, Friendly, Deals.',
   url: 'https://nerdsfighting.com',
-  ogImage: '/og-image.jpg',
+  ogImage: '/logo.png',
   links: {
     yelp: 'https://yelp.com',
     github: 'https://github.com/Lit2l'

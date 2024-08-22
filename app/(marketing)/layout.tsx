@@ -10,7 +10,7 @@ interface MarketingLayoutProps {
 
 export default function MarketingLayout({ children }: MarketingLayoutProps) {
   return (
-    <div className='min-h-screen bg-[radial-gradient(circle_700px_at_50%_350px,#181818,transparent)] '>
+    <div className='min-h-screen w-full bg-[radial-gradient(circle_700px_at_50%_350px,#181818,transparent)] '>
       {/* <NavMobile />
       <NavBar scroll={true} /> */}
 
