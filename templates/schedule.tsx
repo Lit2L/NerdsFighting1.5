@@ -65,7 +65,7 @@ export const Schedule: React.FC = () => {
     <section id='schedule' className='w-full'>
       <div className='mx-auto flex flex-col items-center justify-center '>
         <div className='space-y-9 text-center'>
-          <p className='font-heading text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-black/80 dark:text-white'>
+          <p className='font-heading text-3xl md:text-6xl font-bold tracking-tight text-black/80 dark:text-white'>
             CLASS SCHEDULE
           </p>
           <Separator className='w-20 mx-auto' />

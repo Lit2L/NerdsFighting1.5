@@ -10,7 +10,7 @@ export const Menu = () => {
     <section id='menu' className='w-full h-full relative '>
       <div className=' px-0 md:px-12 py-20 bg-gray-600 z-20 '>
         <div className='mx-auto max-w-3xl space-y-6 text-center'>
-          <h2 className='text-3xl font-bold font-heading tracking-tight sm:text-4xl md:text-5xl'>
+          <h2 className='text-3xl font-bold font-heading tracking-tight sm:text-4xl md:text-6xl'>
             Menu
           </h2>
           <p className='leading-relaxed text-muted-foreground md:text-xl'>

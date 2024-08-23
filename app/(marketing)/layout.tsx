@@ -12,7 +12,7 @@ export default function MarketingLayout({ children }: MarketingLayoutProps) {
 
       {/* <Navigation /> */}
 
-      <main className='flex-1'>{children}</main>
+      <main className=''>{children}</main>
       <SiteFooter />
     </div>
   )

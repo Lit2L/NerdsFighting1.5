@@ -102,7 +102,7 @@ export const Training = () => {
   return (
     <section id='training' className='w-full h-full '>
       <div className='text-center  '>
-        <p className='my-3 text-6xl font-heading tracking-tight uppercase'>
+        <p className='my-3 text-3xl md:text-6xl font-heading tracking-tight uppercase'>
           TRAINING
         </p>
       </div>

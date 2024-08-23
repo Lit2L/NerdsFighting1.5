@@ -30,10 +30,7 @@ export function Navigation({ scroll = false }: NavBarProps) {
         <Logo />
       </Link>
 
-      <nav className='flex items-center mx-auto font-heading gap-6 px-6 tracking-tight text-xl'>
-        <AnimatedLink href='/#intro' variants={linkVariants}>
-          Home
-        </AnimatedLink>
+      <nav className='flex items-center mx-auto font-heading gap-3 py-3 tracking-tight'>
         <AnimatedLink href='/#about' variants={linkVariants}>
           About
         </AnimatedLink>
