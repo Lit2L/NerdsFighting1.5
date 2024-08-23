@@ -22,19 +22,15 @@ export function Navigation({ scroll = false }: NavBarProps) {
 
   return (
     <motion.header
-      className={`sticky top-0 z-40 flex justify-between max-w-full py-1 md:px-6 items-center backdrop-blur-xl transition-all bg-gradient-to-bl from-emerald-600/90 via-emerald-600/70 to-emerald-500/90 ${
+      className={`sticky top-0 z-40 flex w-full items-center backdrop-blur-xl transition-all px-6 bg-gradient-to-bl from-emerald-600/90 via-emerald-600/70 to-emerald-500/90 ${
         scroll ? (scrolled ? 'border-b' : 'bg-transparent') : 'border-b'
       }`}
     >
-      <AnimatedLink
-        href='/#'
-        variants={linkVariants}
-        className='hidden md:block h-20 w-28'
-      >
+      <Link href='/#' className='hidden md:flex p-3 h-20 w-24'>
         <Logo />
-      </AnimatedLink>
+      </Link>
 
-      <nav className='text-sm md:text-md flex items-center justify-between gap-x-3 md:gap-x-6 font-heading mx-auto md:mx-0  px-6 tracking-tight'>
+      <nav className='flex items-center mx-auto font-heading gap-6 px-6 tracking-tight text-xl'>
         <AnimatedLink href='/#intro' variants={linkVariants}>
           Home
         </AnimatedLink>
@@ -47,11 +43,16 @@ export function Navigation({ scroll = false }: NavBarProps) {
         <AnimatedLink href='/#menu' variants={linkVariants}>
           Menu
         </AnimatedLink>
-
-        <motion.div variants={linkVariants}>
-          <ThemeToggleButton />
-        </motion.div>
+        <AnimatedLink
+          href='https://calendly.com/nerdsfighting/private-coaching'
+          variants={linkVariants}
+        >
+          Book Private
+        </AnimatedLink>
       </nav>
+      <motion.div variants={linkVariants}>
+        <ThemeToggleButton />
+      </motion.div>
     </motion.header>
   )
 }

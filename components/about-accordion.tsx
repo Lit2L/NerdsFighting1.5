@@ -41,7 +41,7 @@ export function AccordionAbout() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value='item-2'>
-        <AccordionTrigger className='text-sm'>
+        <AccordionTrigger className='text-lg'>
           Nerds Story Continued...
         </AccordionTrigger>
         <AccordionContent className='font-sans leading-6 bg-black/10 rounded-lg '>
@@ -63,7 +63,7 @@ export function AccordionAbout() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value='item-3'>
-        <AccordionTrigger>The Goal</AccordionTrigger>
+        <AccordionTrigger className='text-lg'>The Goal</AccordionTrigger>
         <AccordionContent>
           <div className='p-6 font-mono text-xl font-bold'>
             <span className='font-heading text-lg text-black dark:text-emerald-500'>

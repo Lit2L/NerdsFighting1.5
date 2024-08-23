@@ -1,5 +1,6 @@
 import Image from 'next/legacy/image'
 import { IconPokeball, IconTrees } from '@tabler/icons-react'
+import { VideoIcon } from 'lucide-react'
 import { CiVideoOn } from 'react-icons/ci'
 import { GiTeacher, GiWhistle, GiYinYang } from 'react-icons/gi'
 import { PiParkDuotone } from 'react-icons/pi'
@@ -36,13 +37,13 @@ const featureCards = [
   },
   {
     id: 2,
-    title: 'Video Analysis',
+    title: 'Hands on Training',
     description:
-      'Accelerate your progress with visual feedback. Our coaches guide you through sessions to pinpoint areas for improvement and deepen your understanding of fight mechanics.',
+      'Get hands-on training with our coaches who guide you through every session. Our coaches provide personalized feedback to help you improve your technique and reach your goals. ',
     duration: '',
     levels: '',
     recommended: '',
-    image: '/nerds2.jpg',
+    image: '/nerds6.png',
     icon: <CiVideoOn className='size-6 text-red-800' />,
     href: 'https://calendly.com/nerdsfighting/video-analysis-session-1'
   },
@@ -55,7 +56,7 @@ const featureCards = [
     duration: '1 Hour',
     levels: '',
     recommended: '',
-    image: '/nerds3.png',
+    image: '/nerds7.png',
     icon: <GiTeacher className='size-6 ' />,
     href: 'https://calendly.com/nerdsfighting/free-trial-kickboxing-class'
   },
@@ -101,7 +102,9 @@ export const Training = () => {
   return (
     <section id='training' className='w-full h-full '>
       <div className='text-center  '>
-        <p className='my-6 text-4xl font-heading uppercase'>TRAINING</p>
+        <p className='my-3 text-6xl font-heading tracking-tight uppercase'>
+          TRAINING
+        </p>
       </div>
       <Separator className='w-20' />
       <div className='w-full mx-auto'>
@@ -114,7 +117,7 @@ export const Training = () => {
                   alt={card.title}
                   className='rounded-lg object-cover'
                   height={300}
-                  width={320}
+                  width={420}
                 />
               </div>
             </div>
@@ -135,6 +138,38 @@ export const Training = () => {
             </div>
           </div>
         ))}
+        <div className='flex flex-col mt-6 gap-6 '>
+          <div className='w-full'>
+            <div className='flex w-full items-center p-2 justify-center'>
+              <Image
+                src='/nerds4.png'
+                alt='Video Analysis'
+                className='rounded-lg object-cover'
+                height={300}
+                width={320}
+              />
+            </div>
+          </div>
+
+          <div className='flex flex-col border-b'>
+            <div className=' p-6 flex flex-col gap-3'>
+              <div className='flex gap-3 items-center'>
+                <div className=''>
+                  <VideoIcon />
+                </div>
+                <p className='font-heading text-md'>Video Analysis </p>
+              </div>
+              <div className='flex flex-col '>
+                <p className='text-sm dark:text-white'>
+                  <strong className=''> Description:</strong> Accelerate your
+                  progress with visual feedback. Our coaches guide you through
+                  sessions to pinpoint areas for improvement and deepen your
+                  understanding of fight mechanics.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )

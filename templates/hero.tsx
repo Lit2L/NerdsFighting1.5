@@ -17,7 +17,7 @@ export const Hero = () => {
             </Badge>
             <div className=''>
               <GradualSpacing
-                className='text-center font-logo text-white'
+                className='text-center font-logo'
                 text='Nerds Fighting'
               />
             </div>

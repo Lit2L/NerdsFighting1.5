@@ -6,7 +6,7 @@ import { Training } from '@/templates/training'
 
 export default function IndexPage() {
   return (
-    <div className='relative min-h-screen max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto flex w-full flex-col gap-24 '>
+    <div className='relative min-h-screen max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto flex w-full flex-col gap-24 '>
       <Hero />
       <About />
       <Schedule />

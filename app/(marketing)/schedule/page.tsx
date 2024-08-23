@@ -69,12 +69,9 @@ const Schedule: React.FC = () => {
     >
       <div className='mx-auto flex flex-col items-center justify-center sm:container'>
         <div className='space-y-9 text-center'>
-          <Link
-            href='/schedule'
-            className='font-logo text-3xl tracking-wide text-black/80 dark:text-white  md:text-6xl'
-          >
+          <p className='font-logo text-4xl tracking-wide text-black/80 dark:text-white  '>
             Class Schedule
-          </Link>
+          </p>
           <p className='font-heading font-light text-black dark:text-white'>
             Find the schedule that works for you.
           </p>
@@ -125,7 +122,7 @@ const Schedule: React.FC = () => {
                       {item.description}
                     </p>
                   </span>
-                  <AnimatedJoinButton />
+                  {/* <AnimatedJoinButton /> */}
                 </div>
               </div>
             ))}

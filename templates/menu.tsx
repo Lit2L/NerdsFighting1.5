@@ -3,6 +3,7 @@
 import Link from 'next/link'
 
 import { Separator } from '@/components/ui/separator'
+import { AnimatedMembersButton } from '@/components/magicui/AnimatedMembersButton'
 
 export const Menu = () => {
   return (
@@ -20,7 +21,7 @@ export const Menu = () => {
 
         <div className='flex justify-between border-b p-3 md:p-6'>
           <div className='flex w-1/3 flex-col gap-3'>
-            <strong className='text-md font-semibold'>Membership </strong>
+            <p className='text-md font-semibold'>Membership </p>
             <ul className='indent-6 space-y-6 md:p-6'>
               <li className='text-sm '>• Access to All Kickboxing classes</li>
               <li className='text-sm  '>• 1 Hr Private Group Sessions</li>
@@ -32,15 +33,13 @@ export const Menu = () => {
               </li>
             </ul>
           </div>
-          <strong className='capitalize text-md w-1/3 text-end'>
+          <p className='text-emerald-500 font-serif text-md w-1/3 text-end'>
             $125/month
-          </strong>
+          </p>
         </div>
         <div className='flex justify-between p-3 md:p-6'>
           <div className='flex w-1/3 flex-col gap-3'>
-            <strong className='text-md font-semibold'>
-              Private Group Session
-            </strong>
+            <p className='text-md font-semibold'>Private Group Session</p>
             <ul className='indent-6 space-y-6 md:p-6'>
               <li className='text-sm font-semibold sm:text-md '>
                 1 Hr Private Group Sessions
@@ -55,16 +54,12 @@ export const Menu = () => {
               </li>
             </ul>
           </div>
-          <strong className='capitalize text-md w-1/3 text-end'>
-            $125/session
-          </strong>
+          <p className='capitalize text-md w-1/3 text-end'>$125/session</p>
         </div>
         <Separator className='' />
         <div className='flex justify-between p-3 md:p-6'>
           <div className='flex w-1/3 flex-col gap-3'>
-            <strong className='text-md font-semibold'>
-              Private Session(1-on-1)
-            </strong>
+            <p className='text-md font-semibold'>Private Session(1-on-1)</p>
             <ul className='indent-6 space-y-6 md:p-6'>
               <li className='text-sm'>• 1 hr Private Session</li>
               <li className='text-sm '>• Customized Training</li>
@@ -74,9 +69,9 @@ export const Menu = () => {
               </li>
             </ul>
           </div>
-          <strong className='capitalize text-md w-1/3 text-end'>
-            Call for pricing
-          </strong>
+        </div>
+        <div className='w-full flex '>
+          <AnimatedMembersButton />
         </div>
         <Separator className='mb-6' />
       </div>
