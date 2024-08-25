@@ -8,13 +8,11 @@ import GradualSpacing from '@/components/magicui/gradual-spacing'
 
 export const Hero = () => {
   return (
-    <section id='hero' className='w-full py-12 border'>
+    <section id='hero' className='w-full py-12'>
       <div className='container '>
         <div className='space-y-9'>
           <div className='flex flex-col z-20 items-center space-y-9 p-6 text-center'>
-            <Badge className='md:text-md rounded-lg text-xs uppercase shadow-red-900 sm:font-heading tracking-wide'>
-              Kickboxing & Martial Arts Club
-            </Badge>
+            <Badge className=''>Kickboxing & Martial Arts Club</Badge>
             <div className=''>
               <GradualSpacing
                 className='text-center font-logo'

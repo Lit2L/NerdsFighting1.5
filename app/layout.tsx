@@ -1,12 +1,12 @@
 import '../styles/globals.css'
 import { Toaster } from 'sonner'
 
-import { cn, constructMetadata } from '@/lib/utils'
+import { constructMetadata } from '@/lib/utils'
 import { TooltipProvider } from '@/components/ui/tooltip'
+import Hydrate from '@/components/Hydrate'
 import { Analytics } from '@/components/analytics'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { ThemeProvider } from '@/components/theme-provider'
-import { fontHeading, fontLogo, fontSans } from '@/app/assets'
 
 export const metadata = constructMetadata()
 
@@ -18,14 +18,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='en' suppressHydrationWarning>
       <head />
-      <body
+      {/* <body
         className={cn(
           'min-h-screen bg-background font-sans antialiased',
           fontSans.variable,
           fontHeading.variable,
           fontLogo.variable
         )}
-      >
+      > */}
+      <Hydrate>
         <ThemeProvider
           attribute='class'
           defaultTheme='dark'
@@ -39,7 +40,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <TailwindIndicator />
           </TooltipProvider>
         </ThemeProvider>
-      </body>
+      </Hydrate>
+      {/* </body> */}
     </html>
   )
 }
