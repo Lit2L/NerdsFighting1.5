@@ -21,7 +21,7 @@ const featureCards = [
   {
     id: 1,
     title: 'Group Training Sessions',
-    description: `Join a welcoming martial arts community where individuals come together to enhance their health, longevity, courage, and striking skills. We grow together and hold each other accountable, ensuring you never feel alone. Empower yourself with the confidence that comes from being part of a group dedicated to helping you prepare for whatever life throws your way.`,
+    description: `Join a welcoming martial arts community where individuals come together to enhance their health, longevity, striking skills and courage. We train together and grow together. Empower yourself with the confidence that comes from being part of a group of like-minded individuals dedicated to grow stronger.`,
     duration: '1 Hour',
     levels: '',
     recommended: '',
@@ -33,7 +33,7 @@ const featureCards = [
     id: 2,
     title: 'Hands on Coaching',
     description:
-      'Get hands-on training with our coaches who guide you through every session. Our coaches provide personalized feedback to help you improve your technique and reach your goals. ',
+      'Get hands-on training with as we guide you through every session. We provide personalized feedback to help you improve your technique and reach your goals. ',
     duration: '',
     levels: '',
     recommended: '',
@@ -45,11 +45,11 @@ const featureCards = [
   {
     id: 3,
     title: 'No Intimidation Zone',
-    description: `It's natural to feel nervous and intimidated when trying something new, especially when it comes to martial arts. Our experienced members and coaches have experienced this fear ourselves and we want you to know that we have fostered a safe and welcoming environment for you to learn and grow. `,
+    description: `Fight gyms can be intimidating.  It's almost as if you are walking in and signing up for your own beat down. We understand this feel all too well so I'd like to say that nobody is here to beat you up.  It's natural to feel nervous and intimidated when trying something new, especially when it comes to martial arts. Our experienced staff have experienced this fear ourselves and we want you to know that we have fostered a safe and welcoming environment for you to learn and grow. There is never any pressure to spar, compete or anything else you are not comfortable with. `,
     duration: '1 Hour',
     levels: '',
     recommended: '',
-    image: '/nerds-friendly2.png',
+    image: '/nerds-friendly.png',
     icon: <GiTeacher className='size-6 ' />,
     href: 'https://calendly.com/nerdsfighting/free-trial-kickboxing-class'
   },
