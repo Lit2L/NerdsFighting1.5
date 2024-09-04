@@ -1,10 +1,9 @@
 'use client'
 
-// import { SessionProvider } from 'next-auth/react'
 import { ReactNode, useEffect, useState } from 'react'
 
 import { cn } from '@/lib/utils'
-import { fontHeading, fontLogo, fontSans } from '@/app/assets'
+import { fontGeist, fontHeading, fontLogo, fontSans } from '@/app/assets'
 
 export default function Hydrate({ children }: { children: ReactNode }) {
   const [isHydrated, setIsHydrated] = useState(false)
@@ -22,17 +21,22 @@ export default function Hydrate({ children }: { children: ReactNode }) {
   }, [])
 
   return (
-    // <SessionProvider>
-    <body
-      className={cn(
-        'min-h-screen bg-background/90 font-sans antialiased',
-        fontSans.variable,
-        fontHeading.variable,
-        fontLogo.variable
+    <>
+      {isHydrated ? (
+        <body
+          className={cn(
+            'min-h-screen bg-background/90 font-sans antialiased max-w-full',
+            fontSans.variable,
+            fontLogo.variable,
+            fontHeading.variable,
+            fontGeist.variable
+          )}
+        >
+          {children}
+        </body>
+      ) : (
+        <body></body>
       )}
-    >
-      {isHydrated && children}
-    </body>
-    // </SessionProvider>
+    </>
   )
 }

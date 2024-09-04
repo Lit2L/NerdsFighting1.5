@@ -1,6 +1,6 @@
 import Image from 'next/legacy/image'
 
-function Logo() {
+function Logo({ className }: { className?: string }) {
   return (
     <Image
       src='/logo.png'

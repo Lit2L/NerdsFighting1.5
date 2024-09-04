@@ -15,3 +15,8 @@ export const fontHeading = localFont({
   src: './BlackOpsOne-Regular.ttf',
   variable: '--font-heading'
 })
+
+export const fontGeist = Urbanist({
+  subsets: ['latin'],
+  variable: '--font-geist'
+})

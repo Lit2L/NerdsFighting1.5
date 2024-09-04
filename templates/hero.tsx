@@ -8,7 +8,10 @@ import GradualSpacing from '@/components/magicui/gradual-spacing'
 
 export const Hero = () => {
   return (
-    <section id='hero' className='w-full py-12'>
+    <section
+      id='hero'
+      className='w-full py-12 relative min-h-screen max-w-4xl mx-auto flex w-full flex-col my-16 py-12 space-y-24 '
+    >
       <div className='container '>
         <div className='space-y-9'>
           <div className='flex flex-col z-20 items-center space-y-9 p-6 text-center'>

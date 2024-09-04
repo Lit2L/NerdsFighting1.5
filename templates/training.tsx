@@ -61,7 +61,7 @@ const featureCards = [
     duration: '1 Hour',
     recommended:
       'boxing/kickboxing/muay thai gloves, hand wraps, water bottle, shin-pads, towel',
-    image: '/about1.jpg',
+    image: '/about1.jpeg',
     icon: <GiWhistle className='size-6 text-blue-800' />,
     href: 'https://calendly.com/nerdsfighting/private-coaching'
   },
@@ -93,7 +93,7 @@ const featureCards = [
 
 export const Training = () => {
   return (
-    <section id='training' className='w-full h-full '>
+    <section id='training' className='w-full h-full mx-auto'>
       <div className='text-center  '>
         <p className='my-3 text-3xl md:text-5xl font-heading tracking-tight uppercase'>
           TRAINING

@@ -18,14 +18,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='en' suppressHydrationWarning>
       <head />
-      {/* <body
-        className={cn(
-          'min-h-screen bg-background font-sans antialiased',
-          fontSans.variable,
-          fontHeading.variable,
-          fontLogo.variable
-        )}
-      > */}
+
       <Hydrate>
         <ThemeProvider
           attribute='class'
@@ -41,7 +34,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
           </TooltipProvider>
         </ThemeProvider>
       </Hydrate>
-      {/* </body> */}
     </html>
   )
 }

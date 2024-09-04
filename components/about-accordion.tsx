@@ -17,34 +17,36 @@ export function AccordionAbout() {
       <AccordionItem value='item-1 '>
         <AccordionTrigger>
           <span className='font-heading text-center text-lg '>
-            Nerds Fighting Origins...
+            Nerds Fighting Origin Story
           </span>{' '}
         </AccordionTrigger>
 
-        <AccordionContent className='leading-6 font-urban text-left'>
-          Once upon a time a group of friends united by their love for kung-fu
-          movies, anime, books, comics, video games and magic cards, decided to
-          transform their lives. This gang of nerds were the awkward people who
-          avoided anything physical and made every effort to avoid
-          confrontation. Deep down, they wanted to learn how to fight and defend
-          themselves. Despite their fears, they made a pact to train hard and
-          push their limits, and the results were incredible. They grew
-          stronger, more confident, healthier and mentally sharper. <br />
-          With all these positive benefits however, the intense training took
-          its toll. Bruises and injuries began to pile up, and they worried
-          about the long-term damage they would accumulate as they continued to
-          train, especially to their brains. Determined to continue without
-          risking their longevity and health, they sought out a new approach to
-          training. One that focused on defensive skills, proper technique, and
-          controlled sparring. This method allowed them to train like fighters
-          while safeguarding their well-being.
+        <AccordionContent className='leading-6 font-geist text-left '>
+          One day a group of nerds who were very tired of being disrespected and
+          antagonized, befriended me and asked if I could teach them how to
+          fight. I didn&apos;t think they were serious but I could see in their
+          eyes that they really wanted this so we immediately started working.
+          <br />
+          <br />
+          When we started I was pretty sure they were going to quit soon. But
+          they didn&apos;t. They would surprise me pretty often in training
+          especially with their consistency and willingness to scrap. The
+          outcome was pretty incredible. Everyone is and will different but some
+          notable benefits gained from trainer were that some of them reduced
+          their medication intake by half, some were able to drop all
+          medications completely, everyone lost body fat, all were stronger and
+          tougher and definitely more confident as a result. All this from a
+          bunch of nerds getting together to train and push each other and that
+          is what inspired me to extend this experience to because I believe
+          that everyone should know what it feels like to be strong, skilled,
+          confident and comfortable in their own skin.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value='item-2'>
-        <AccordionTrigger className='text-lg'>
+        {/* <AccordionTrigger className='text-lg'>
           Nerds Story Continued...
-        </AccordionTrigger>
-        <AccordionContent className='font-sans leading-6 bg-black/10 rounded-lg '>
+        </AccordionTrigger> */}
+        {/* <AccordionContent className='font-geist leading-6 bg-black/10 rounded-lg '>
           And so...
           <span className='font-logo text-2xl text-emerald-950 font-extrabold '>
             Nerds Fighting
@@ -60,9 +62,9 @@ export function AccordionAbout() {
           <br /> Come join us at Nerds Fighting. We&apos;ll show you that anyone
           can train like a fighter, get in shape, and build confidence safely
           and effectively.
-        </AccordionContent>
+        </AccordionContent> */}
       </AccordionItem>
-      <AccordionItem value='item-3'>
+      {/* <AccordionItem value='item-3'>
         <AccordionTrigger className='text-lg'>The Goal</AccordionTrigger>
         <AccordionContent>
           <div className='p-6 font-mono text-xl font-bold'>
@@ -86,7 +88,7 @@ export function AccordionAbout() {
             </ul>
           </div>
         </AccordionContent>
-      </AccordionItem>
+      </AccordionItem> */}
     </Accordion>
   )
 }
