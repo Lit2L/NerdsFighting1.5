@@ -13,7 +13,10 @@ export const Schedule: React.FC = () => {
       title: 'Sunday',
       description: 'Cardio Kickboxing',
       level: 'All levels',
-      schedule: [{ id: 1, day: 'Sun', time: '8:00 AM' }]
+      schedule: [
+        { id: 1, day: 'Sun', time: '6:00 AM' },
+        { id: 2, day: 'Sun', time: '8:00 AM' }
+      ]
     },
     {
       id: 2,

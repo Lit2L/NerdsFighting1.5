@@ -5,6 +5,7 @@ import { constructMetadata } from '@/lib/utils'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import Hydrate from '@/components/Hydrate'
 import { Analytics } from '@/components/analytics'
+import { Navigation } from '@/components/navigation'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { ThemeProvider } from '@/components/theme-provider'
 

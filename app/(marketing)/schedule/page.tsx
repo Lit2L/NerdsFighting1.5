@@ -20,10 +20,7 @@ const classes = [
     title: 'Monday',
     description: 'Technique & Skill',
     level: 'All levels',
-    schedule: [
-      { id: 1, day: 'Mon', time: '7:00 AM' },
-      { id: 2, day: 'Mon', time: '9:00 AM' }
-    ]
+    schedule: [{ id: 2, day: 'Mon', time: '9:00 AM' }]
   },
 
   {
