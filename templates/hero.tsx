@@ -1,5 +1,4 @@
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
 import Logo from '@/components/logo'
 import { AnimatedJoinButton } from '@/components/magicui/AnimatedJoinButton'
 import { AnimatedMembersButton } from '@/components/magicui/AnimatedMembersButton'
@@ -9,7 +8,7 @@ import GradualSpacing from '@/components/magicui/gradual-spacing'
 export const Hero = () => {
   return (
     <section id='hero' className='w-full relative  max-w-4xl mx-auto w-full'>
-      <div className='flex flex-col container space-y-12'>
+      <div className='flex flex-col container py-24 space-y-16'>
         <div className='flex flex-col z-20 items-center text-center gap-6'>
           <Badge className=''>Kickboxing & Martial Arts Club</Badge>
 
@@ -23,7 +22,7 @@ export const Hero = () => {
           </div>
           <FlipWordsComponent />
         </div>
-        <div className='flex gap-3 sm:gap-6 justify-center h-24'>
+        <div className='flex w-full h-full justify-center items-center gap-10 '>
           <AnimatedJoinButton />
           <AnimatedMembersButton />
         </div>

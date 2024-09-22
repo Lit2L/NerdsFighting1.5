@@ -104,6 +104,41 @@ const config: Config = {
           to: {
             backgroundPosition: '-200% 0'
           }
+        },
+        'border-beam': {
+          '100%': {
+            'offset-distance': '100%'
+          }
+        },
+        'image-glow': {
+          '0%': {
+            opacity: '0',
+            'animation-timing-function': 'cubic-bezier(0.74, 0.25, 0.76, 1)'
+          },
+          '10%': {
+            opacity: '0.7',
+            'animation-timing-function': 'cubic-bezier(0.12, 0.01, 0.08, 0.99)'
+          },
+          '100%': {
+            opacity: '0.4'
+          }
+        },
+        marquee: {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(calc(-100% - var(--gap)))' }
+        },
+        'marquee-vertical': {
+          from: { transform: 'translateY(0)' },
+          to: { transform: 'translateY(calc(-100% - var(--gap)))' }
+        },
+
+        'fade-in': {
+          from: { opacity: '0', transform: 'translateY(-10px)' },
+          to: { opacity: '1', transform: 'none' }
+        },
+        'fade-up': {
+          from: { opacity: '0', transform: 'translateY(20px)' },
+          to: { opacity: '1', transform: 'none' }
         }
       },
       animation: {

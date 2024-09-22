@@ -1,5 +1,6 @@
 import { SiteFooter } from '@/components/layout/site-footer'
 import { Navigation } from '@/components/navigation'
+import { MobileNav } from '@/components/navigation/mobile-navigation'
 
 interface MarketingLayoutProps {
   children: React.ReactNode
@@ -13,6 +14,7 @@ export default function MarketingLayout({ children }: MarketingLayoutProps) {
       {/* <Navigation /> */}
 
       <Navigation />
+      <MobileNav />
       <main className='mt-24'>{children}</main>
       <SiteFooter />
     </div>

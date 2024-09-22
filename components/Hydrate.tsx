@@ -25,7 +25,7 @@ export default function Hydrate({ children }: { children: ReactNode }) {
       {isHydrated ? (
         <body
           className={cn(
-            'min-h-screen bg-background/90 font-sans antialiased max-w-full',
+            'bg-background/90 font-sans antialiased ',
             fontSans.variable,
             fontLogo.variable,
             fontHeading.variable,

@@ -71,7 +71,7 @@ export default function Component() {
           </div>
         </div>
 
-        <h1 className='text-5xl md:text-7xl font-bold mb-4 glitch-text'>
+        <h1 className='text-5xl md:text-7xl font-logo font-bold mb-4 glitch-text'>
           {glitchText}
         </h1>
         <p className='text-xl md:text-2xl mb-8 text-cyan-400'>

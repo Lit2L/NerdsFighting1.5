@@ -22,10 +22,7 @@ export function AccordionAbout() {
         </AccordionTrigger>
 
         <AccordionContent className='leading-6 font-geist text-left '>
-          One day a group of nerds who were very tired of being disrespected and
-          antagonized, befriended me and asked if I could teach them how to
-          fight. I didn&apos;t think they were serious but I could see in their
-          eyes that they really wanted this so we immediately started working.
+          The Nerds Fighting
           <br />
           <br />
           When we started I was pretty sure they were going to quit soon. But
