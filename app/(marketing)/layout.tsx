@@ -8,14 +8,10 @@ interface MarketingLayoutProps {
 
 export default function MarketingLayout({ children }: MarketingLayoutProps) {
   return (
-    <div className='min-h-screen flex flex-col bg-[radial-gradient(circle_550px_at_50%_450px,#18181891,transparent)] dark:bg-[radial-gradient(circle_350px_at_50%_450px,#a614204d,transparent)] relative w-full'>
-      {/* <Navigation scroll={true} /> */}
-
-      {/* <Navigation /> */}
-
+    <div className='relative flex min-h-screen flex-col justify-between overflow-x-hidden'>
       <Navigation />
       <MobileNav />
-      <main className='mt-24'>{children}</main>
+      <main className='font-sans'>{children}</main>
       <SiteFooter />
     </div>
   )

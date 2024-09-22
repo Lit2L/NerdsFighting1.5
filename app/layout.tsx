@@ -17,7 +17,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang='en' suppressHydrationWarning>
+    <html lang='en'>
       <head />
 
       <Hydrate>
@@ -28,7 +28,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           disableTransitionOnChange
         >
           <TooltipProvider>
-            {children}
+            <div className='min-h-screen bg-background/90'>{children}</div>
             <Analytics />
             <Toaster richColors closeButton />
             <TailwindIndicator />

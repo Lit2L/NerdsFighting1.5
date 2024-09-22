@@ -23,7 +23,7 @@ export function Navigation({ scroll = false }: NavBarProps) {
 
   return (
     <motion.header
-      className={`sticky top-0 z-40 md:flex w-full items-center backdrop-blur-xl transition-all px-16 bg-gradient-to-bl rounded-sm hidden  from-emerald-600/90 via-emerald-600/50 to-emerald-500/90 ${
+      className={`fixed inset-x-0 top-0 z-40 hidden h-24 justify-between md:flex w-full items-center backdrop-blur-xl transition-all px-16 bg-gradient-to-bl rounded-sm hidden  from-emerald-600/90 via-emerald-600/50 to-emerald-500/90 ${
         scroll ? (scrolled ? 'border-b' : 'bg-transparent') : 'border-none'
       }`}
     >

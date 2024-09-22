@@ -7,23 +7,30 @@ import plugin from 'tailwindcss/plugin'
 const config: Config = {
   darkMode: ['class'],
   content: [
+    './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}'
   ],
-  future: {
-    hoverOnlyWhenSupported: true
-  },
   prefix: '',
   theme: {
     container: {
       center: true,
-      padding: '.8rem',
+      padding: '2rem',
       screens: {
         '2xl': '1400px'
       }
     },
     extend: {
+      boxShadow: {
+        input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`
+      },
+
+      textShadow: {
+        sm: '0 1px 2px var(--tw-shadow-color)',
+        DEFAULT: '0 2px 4px var(--tw-shadow-color)',
+        lg: '0 8px 16px var(--tw-shadow-color)'
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -33,10 +40,6 @@ const config: Config = {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))'
-        },
-        transitionTimingFunction: {
-          slow: 'cubic-bezier(.405, 0, .025, 1)',
-          'minor-spring': 'cubic-bezier(0.18,0.89,0.82,1.04)'
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
@@ -61,26 +64,16 @@ const config: Config = {
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))'
+        },
+        nerdblue: {
+          DEFAULT: 'hsl(var(--nerdblue))',
+          foreground: 'hsl(var(--nerdblue-foreground))'
         }
       },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
-      },
-      fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans],
-        heading: ['var(--font-heading)', ...fontFamily.sans],
-        logo: ['var(--font-logo)', ...fontFamily.sans],
-        geist: ['var(--font-geist)', ...fontFamily.sans]
-      },
-      boxShadow: {
-        input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`
-      },
-      textShadow: {
-        sm: '0 1px 2px var(--tw-shadow-color)',
-        DEFAULT: '0 2px 4px var(--tw-shadow-color)',
-        lg: '0 8px 16px var(--tw-shadow-color)'
       },
       keyframes: {
         'accordion-down': {
@@ -104,60 +97,23 @@ const config: Config = {
           to: {
             backgroundPosition: '-200% 0'
           }
-        },
-        'border-beam': {
-          '100%': {
-            'offset-distance': '100%'
-          }
-        },
-        'image-glow': {
-          '0%': {
-            opacity: '0',
-            'animation-timing-function': 'cubic-bezier(0.74, 0.25, 0.76, 1)'
-          },
-          '10%': {
-            opacity: '0.7',
-            'animation-timing-function': 'cubic-bezier(0.12, 0.01, 0.08, 0.99)'
-          },
-          '100%': {
-            opacity: '0.4'
-          }
-        },
-        marquee: {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(calc(-100% - var(--gap)))' }
-        },
-        'marquee-vertical': {
-          from: { transform: 'translateY(0)' },
-          to: { transform: 'translateY(calc(-100% - var(--gap)))' }
-        },
-
-        'fade-in': {
-          from: { opacity: '0', transform: 'translateY(-10px)' },
-          to: { opacity: '1', transform: 'none' }
-        },
-        'fade-up': {
-          from: { opacity: '0', transform: 'translateY(20px)' },
-          to: { opacity: '1', transform: 'none' }
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        shimmer: 'shimmer 8s linear infinite',
-        // Fade up and down
-        'fade-up': 'fade-up 0.5s',
-        'fade-down': 'fade-down 0.5s',
-
-        // Fade in and out
-        'fade-in': 'fade-in 0.4s',
-        'fade-out': 'fade-out 0.4s'
+        shimmer: 'shimmer 8s linear infinite'
+      },
+      fontFamily: {
+        sans: ['var(--font-sans)', ...fontFamily.sans],
+        heading: ['var(--font-heading)', ...fontFamily.sans],
+        logo: ['var(--font-logo)', ...fontFamily.sans],
+        kronaOne: ['var(--font-krona-one)', ...fontFamily.sans]
       }
     }
   },
   plugins: [
     require('tailwindcss-animate'),
-    require('@tailwindcss/typography'),
     plugin(addVariablesForColors),
     plugin(({ matchUtilities, theme }) => {
       matchUtilities(
@@ -197,7 +153,7 @@ const config: Config = {
       )
     })
   ]
-} satisfies Config
+}
 function addVariablesForColors({
   addBase,
   theme

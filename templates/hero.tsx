@@ -7,22 +7,26 @@ import GradualSpacing from '@/components/magicui/gradual-spacing'
 
 export const Hero = () => {
   return (
-    <section id='hero' className='w-full relative  max-w-4xl mx-auto w-full'>
-      <div className='flex flex-col container py-24 space-y-16'>
-        <div className='flex flex-col z-20 items-center text-center gap-6'>
-          <Badge className=''>Kickboxing & Martial Arts Club</Badge>
-
+    <section id='hero' className='w-full relative h-screen  '>
+      <div className='flex flex-col items-center justify-evenly container z-10 gap-4 text-center space-y-12 pt-36 h-full'>
+        <div className=''>
+          <Badge className='font-heading tracking-wide'>
+            Kickboxing & Martial Arts Club
+          </Badge>
+        </div>
+        <div className=''>
           <GradualSpacing
-            className='text-center font-logo'
-            text='Nerds Fighting'
+            className='text-center text-[#f2f2f2] font-logo text-2xl '
+            text='Nerds  Fighting'
           />
-
-          <div className='p-6'>
-            <Logo />
-          </div>
+        </div>
+        <div className='p-6 '>
+          <Logo />
+        </div>
+        <div className='my-12 '>
           <FlipWordsComponent />
         </div>
-        <div className='flex w-full h-full justify-center items-center gap-10 '>
+        <div className='flex w-full gap-6 mt-6 justify-center items-center '>
           <AnimatedJoinButton />
           <AnimatedMembersButton />
         </div>
